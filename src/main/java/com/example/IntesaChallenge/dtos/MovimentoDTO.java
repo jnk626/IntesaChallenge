@@ -17,4 +17,5 @@ public class MovimentoDTO {
     private double ammontare;
     private LocalDateTime data;
     private String tipologia;
+    private String descrizione;
 }

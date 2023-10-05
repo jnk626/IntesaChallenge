@@ -25,6 +25,7 @@ public final class Movimento {
     }
     @Enumerated(EnumType.STRING)
     private Tipologia tipologia;
+    private String descrizione;
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnore
     private Conto conto;

@@ -17,13 +17,13 @@ public class MovimentoController {
     @GetMapping("/movimenti-per-utente-{id}")
     public ResponseEntity<?> getAllMovementsByUserId(@PathVariable long id) {
         try {
-            service.getAllMovementsByUserId(id);
+            service.getAllMovementsByContoId(id);
         } catch (EntityNotFoundException e) {
             System.out.println("User not found");
             e.printStackTrace();
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(service.getAllMovementsByUserId(id));
+        return ResponseEntity.ok(service.getAllMovementsByContoId(id));
     }
 
     @CrossOrigin

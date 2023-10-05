@@ -16,6 +16,7 @@ public class MovimentoMapper implements Mapper<Movimento, MovimentoDTO> {
                 .ammontare(movimento.getAmmontare())
                 .data(movimento.getData())
                 .tipologia(String.valueOf(movimento.getTipologia()))
+                .descrizione(movimento.getDescrizione())
                 .build();
     }
 
@@ -26,6 +27,7 @@ public class MovimentoMapper implements Mapper<Movimento, MovimentoDTO> {
                 .ammontare(movimentoDTO.getAmmontare())
                 .data(movimentoDTO.getData())
                 .tipologia(Movimento.Tipologia.valueOf(movimentoDTO.getTipologia()))
+                .descrizione(movimentoDTO.getDescrizione())
                 .build();
     }
 
